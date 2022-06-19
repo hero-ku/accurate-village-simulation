@@ -7,3 +7,4 @@ realm = "shared"
 [dependencies]
 Knit = "sleitnick/knit@1.4.7"
 Fusion = "elttob/fusion@0.1.1-beta"
+TableUtil = "sleitnick/table-util@1.1.4"
