@@ -29,6 +29,16 @@ function StoreService:GetStore(Player: Player)
     return self.Stores[Player]
 end
 
+function StoreService:GetStores(...: Player)
+    return TableUtil.Map({ ... }, function(Player)
+        return self:GetStore(Player)
+    end)
+end
+
+function StoreService:GetAllStores()
+    return TableUtil.Values(self.Stores)
+end
+
 function StoreService:KnitStart()
     Players.PlayerAdded:Connect(function(Player)
         self:CreateStore(Player)
